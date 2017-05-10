@@ -46,7 +46,7 @@ public class FrontController {
             requestAdd.connect();
 
             // Convert to a JSON object to print data
-            JsonParser jp = new JsonParser(); //from gson
+            JsonParser jp = new JsonParser(); 
             JsonElement addServiceResult = jp.parse(new InputStreamReader((InputStream) requestAdd.getContent()));
 
 
