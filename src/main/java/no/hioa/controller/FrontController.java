@@ -39,7 +39,7 @@ public class FrontController {
         String addService = "http://sample-env-9.mufzz4vpsq.eu-central-1.elasticbeanstalk.com/"+num1+"/"+num2; //just a string
         String subService = "http://sample-env-10.mufzz4vpsq.eu-central-1.elasticbeanstalk.com/"+num1+"/"+num2;
 
-        // Connect to the URL using java's native library
+        // Connect to the Service URL using java's native library
         try{
             URL url = new URL(addService);
             HttpURLConnection requestAdd = (HttpURLConnection) url.openConnection();
@@ -63,9 +63,6 @@ public class FrontController {
             model.addAttribute("result", true);
 
         }catch (Exception e){}
-
-
-
 
         return "index";
     }
