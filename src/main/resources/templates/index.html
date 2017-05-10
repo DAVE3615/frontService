@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>home</title>
+</head>
+<body>
+
+<form th:action="@{/data    }" method="post" align="center" >
+    <h2>enter numbers</h2>
+    <div>
+        <input type="text" placeholder="first number" name="num1" />
+    </div>
+    <div>
+        <input type="text" placeholder="second number" name="num2" />
+    </div>
+
+    <button type="submit">calculate</button>
+</form>
+
+<div th:if="${result}" align="center">
+    <h2>results</h2>
+    <div>
+        <p>Result by Add service</p>
+        <p th:text="${addService}" />
+    </div>
+    <div>
+        <p>Result by Subtract service</p>
+        <p th:text="${subService}" />
+    </div>
+</div>
+
+
+</body>
+</html>
